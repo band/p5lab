@@ -26,8 +26,6 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/site.js"></script>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/ico" href="images/favicon.ico">
 </head>
 <body class="code-snippets-visible">
@@ -36,7 +34,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <section class="header">
-      <h4 class="title">p5lab: a laboratory and playroom.</h5>
+      <h3 class="title">p5lab: a laboratory and playroom.</h3>
     </section>
 
     <div class="navbar-spacer"></div>
@@ -46,9 +44,19 @@
           <li class="navbar-item">
             <a class="navbar-link" href="https://textpile-dor.pages.dev/">The Textpile</a>
           </li>
-	  <li class="navbar-item">
-	    <a class="navbar-link" href="https://bandstands.praxis101.net/">Massive Wiki work</a>
-	  </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#wikiNavPopover">Massive Wiki work</a>
+            <div id="wikiNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="https://markpub.org/">Markpub</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://bandstands.praxis101.net/">bandstands</a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="navbar-item">
             <a class="navbar-link" href="#" data-popover="#moreNavPopover">More?</a>
             <div id="moreNavPopover" class="popover">
