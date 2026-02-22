@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Chocolate Classical Sans
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/chocolateclassicalsans/v14/nuFqD-PLTZX4XIgT-P2ToCDudWHHflqUpTpfjWdDPI2J9mHITw.ttf
-- Font License: undefined)
