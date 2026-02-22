@@ -64,10 +64,11 @@
     width: 100%; }
   .navbar-list {
     list-style: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: center; }
   .navbar-item {
     position: relative;
-    float: left;
+    display: inline-block;
     margin-bottom: 0; }
   .navbar-link {
     text-transform: uppercase;
@@ -163,5 +164,7 @@
   color: #333; }
 .space-y-2 > div {
   margin-bottom: 0.5rem; }
+.space-y-1 > div {
+  margin-bottom: 0.25rem; }
 .font-semibold {
   font-weight: 600; }
