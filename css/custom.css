@@ -1,11 +1,11 @@
 .container {
   max-width: 900px;
-  width: 92%; }
+  width: 92%;
+  margin-left: 8rem;
+  margin-right: auto; }
 .header {
   margin-top: 6rem;
   text-align: center; }
-.value-prop {
-  margin-top: 1rem; }
 .value-props {
   margin-top: 4rem;
   margin-bottom: 4rem; }
@@ -17,7 +17,8 @@
 .docs-section {
   border-top: 1px solid #eee;
   padding: 4rem 0;
-  margin-bottom: 0;}
+  margin-bottom: 0;
+  text-align: center; }
 .value-img {
   display: block;
   text-align: center;
@@ -77,17 +78,6 @@
     text-decoration: none;
     line-height: 6.5rem;
     color: #222; }
-  .navbar-link.active {
-    color: #33C3F0; }
-  .has-docked-nav .navbar {
-    position: fixed;
-    top: 0;
-    left: 0; }
-  .has-docked-nav .navbar-spacer {
-    display: block; }
-  /* Re-overiding the width 100% declaration to match size of % based container */
-  .has-docked-nav .navbar > .container {
-    width: 80%; }
 
   /* Popover */
   .popover.open {
@@ -158,3 +148,20 @@
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
 }
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+  margin-top: 4rem;
+  padding: 3rem 0;
+  border-top: 1px solid #eee; }
+.text-center {
+  text-align: center; }
+.text-gray-600 {
+  color: #666; }
+.text-gray-800 {
+  color: #333; }
+.space-y-2 > div {
+  margin-bottom: 0.5rem; }
+.font-semibold {
+  font-weight: 600; }

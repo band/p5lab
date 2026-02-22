@@ -5,7 +5,7 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 * 12/29/2014
-* TRIMMED for p5lab - removed unused grid columns, forms, tables, code, lists
+* 2026-02-22: TRIMMED for p5lab - removed unused grid columns, forms, tables, code, buttons, hr, utilities
 */
 
 
@@ -16,9 +16,7 @@
 - Typography
 - Links
 - Lists
-- Buttons
 - Spacing
-- Misc
 - Clearing
 - Media Queries
 */
@@ -51,7 +49,6 @@
   .container {
     width: 80%; }
 }
-
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -94,14 +91,12 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 p {
   margin-top: 0; }
 
-
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #1EAEDB; }
 a:hover {
   color: #0FA0CE; }
-
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -121,109 +116,29 @@ ol ul {
 li {
   margin-bottom: 1rem; }
 
-
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  box-sizing: border-box; }
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0; }
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
-
-
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-button,
-.button {
-  margin-bottom: 1rem; }
 p,
 ul,
 ol {
   margin-bottom: 2.5rem; }
 
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
-  border-width: 0;
-  border-top: 1px solid #E1E1E1; }
-
-
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 /* Self Clearing Goodness */
 .container:after,
-.row:after,
-.u-cf {
+.row:after {
   content: "";
   display: table;
   clear: both; }
-
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
 Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
+near the relevant code. For example, to change the styles for buttons on small devices,
+paste the mobile query code up in the buttons section and style it there.
 */
-
-
 /* Larger than mobile */
 @media (min-width: 400px) {}
 
