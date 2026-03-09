@@ -111,3 +111,29 @@ window.addEventListener('scroll', function() {
 window.onload = function() {
     handleResize();
 };
+
+// Popover functionality
+(function() {
+    function closePopovers() {
+        document.querySelectorAll('.popover.open').forEach(function(p) {
+            p.classList.remove('open');
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('[data-popover]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var popover = document.querySelector(this.dataset.popover);
+                var isOpen = popover.classList.contains('open');
+                closePopovers();
+                if (!isOpen) {
+                    popover.classList.add('open');
+                }
+            });
+        });
+
+        document.addEventListener('click', closePopovers);
+    });
+}());

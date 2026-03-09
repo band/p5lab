@@ -14,14 +14,15 @@
     <link rel="stylesheet" href="/p5lab/markpub_static/css/style.css">
     <link rel="stylesheet" href="/p5lab/markpub_static/css/forte.css">
     <link rel="stylesheet" href="/p5lab/markpub_static/css/custom.css">
+    <link rel="stylesheet" href="/p5lab/markpub_static/css/linkbar.css">
     <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.12.0/dist/bluesky-comments.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <script src="/p5lab/lunr-index-1773095127.8918066.js"></script>
+    <script src="/p5lab/lunr-index-1773097870.6825104.js"></script>
     <script>var index = lunr.Index.load(lunr_index)</script>
     
     
-    <script src="/p5lab/lunr-posts-1773095127.8918066.js"></script>
+    <script src="/p5lab/lunr-posts-1773097870.6825104.js"></script>
     <script> function randomPageLink() { return "/p5lab"+lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link; } </script>
     
   </head>
@@ -87,77 +88,51 @@
         <h1>CLAUDE.md</h1>
 <p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
 <h2>Project Overview</h2>
-<p>This is a static website for p5lab.net, the Praxis101 laboratory for work and play. The site is built using the Skeleton CSS framework (version 2.0.4), a minimal responsive boilerplate. This is a personal website with historical/archival content rather than an active development project.</p>
+<p>This is a personal/archival site for p5lab.net, built with <strong>Markpub</strong> — a Python-based static site generator that converts Markdown files into a wiki-style website. It is deployed on Netlify.</p>
 <h2>Architecture</h2>
-<h3>Directory Structure</h3>
+<h3>Content and Build</h3>
 <ul>
-<li><strong>Root <code>index.html</code></strong>: Main landing page for p5lab.net</li>
-<li><strong><code>public/</code></strong>: Contains an alternative/historical version of the Praxis101 site
-<ul>
-<li><code>public/index.html</code>: Different landing page emphasizing "present and past"</li>
-<li><code>public/works/</code>: PDF documents and other work artifacts</li>
+<li><strong>Content</strong>: Markdown files at the repo root (e.g., <code>README.md</code>, <code>Sidebar.md</code>) plus subdirectories</li>
+<li><strong>Sidebar navigation</strong>: <code>Sidebar.md</code></li>
+<li><strong>Build config</strong>: <code>.markpub/markpub.yaml</code> — sets site title, author, theme, sidebar, edit URLs, etc.</li>
+<li><strong>Theme</strong>: <code>p5_forte</code> (a customized fork of the <code>forte</code> theme), located at <code>.markpub/themes/p5_forte/</code></li>
+<li><strong>Build output</strong>: <code>.markpub/output/</code> (Markpub copies and converts the entire repo)</li>
+<li><strong>Search</strong>: Lunr.js index built via Node.js; <code>.markpub/package.json</code> lists <code>lunr</code> as a dependency</li>
 </ul>
-</li>
-<li><strong><code>blogs/</code></strong>: Blog index page that links to external blog archives</li>
-<li><strong><code>css/</code></strong>: Styling files
-<ul>
-<li><code>normalize.css</code>: CSS reset/normalization</li>
-<li><code>skeleton.css</code>: Core Skeleton framework grid and components</li>
-<li><code>custom.css</code>: Site-specific customizations</li>
-</ul>
-</li>
-<li><strong><code>images/</code></strong>: Site images including favicon and photos</li>
-<li><strong><code>Skeleton-gh-pages/</code></strong>: Reference copy of the original Skeleton framework (for reference only, not actively used)</li>
-</ul>
-<h3>Multiple Entry Points</h3>
-<p>This site has multiple HTML entry points that serve different purposes:</p>
-<ul>
-<li><code>/index.html</code> - Current p5lab landing page</li>
-<li><code>/public/index.html</code> - Historical Praxis101 page with different navigation</li>
-<li><code>/blogs/index.html</code> - Simple blog archive link page</li>
-</ul>
-<p>All three pages use the same CSS framework but have different content focuses and navigation structures.</p>
-<h3>JavaScript</h3>
-<p>The site references <code>js/site.js</code> in the root <code>index.html</code>, but this file doesn't exist in the repository root. The JavaScript functionality (smooth scrolling, sticky nav, popovers) is borrowed from the Skeleton reference implementation at <code>Skeleton-gh-pages/js/site.js</code>. If JavaScript features are needed, copy this file to a <code>js/</code> directory in the root.</p>
-<p>The site.js provides:</p>
-<ul>
-<li>Smooth scrolling for anchor links</li>
-<li>Sticky navigation on scroll</li>
-<li>Popover menus (used in "More?" navigation item)</li>
-<li>Code snippet HTML escaping</li>
-</ul>
-<h3>Dependencies</h3>
-<ul>
-<li><strong>Skeleton CSS Framework</strong> (v2.0.4): Minimal responsive grid system</li>
-<li><strong>jQuery</strong> (2.1.1): Loaded from CDN for site.js functionality</li>
-<li><strong>Google Fonts</strong>: Raleway font family</li>
-<li><strong>Google Code Prettify</strong>: Code syntax highlighting (referenced but may not be actively used)</li>
-</ul>
-<p>All dependencies are loaded from CDNs; there is no package.json or build system.</p>
-<h2>Development</h2>
-<p>This is a static HTML site with no build process or development server required.</p>
-<h3>Local Development</h3>
-<p>Open HTML files directly in a browser, or use any static file server:</p>
-<pre><code class="language-bash">python -m http.server 8000
-# or
-python3 -m http.server 8000
+<h3>Build Process</h3>
+<p>Netlify runs the build from the <code>.markpub/</code> directory:</p>
+<pre><code>markpub build -i .. -o ./output --lunr --commits
 </code></pre>
-<p>Then navigate to <code>http://localhost:8000</code></p>
-<h3>Editing Content</h3>
+<p>(<code>-i ..</code> points to the repo root as input; <code>--lunr</code> builds the search index; <code>--commits</code> adds git commit metadata)</p>
+<p>To build locally, activate the Python venv and run from <code>.markpub/</code>:</p>
+<pre><code class="language-bash">cd .markpub
+source .venv/bin/activate
+markpub build -i .. -o ./output --lunr --commits
+</code></pre>
+<h3>Theme Customization</h3>
+<p>The active theme lives at <code>.markpub/themes/p5_forte/</code>. It inherits from the <code>forte</code> base theme (<code>.markpub/themes/forte/</code>). Theme templates use Jinja2-style HTML partials:</p>
 <ul>
-<li>HTML files can be edited directly</li>
-<li>CSS customizations go in <code>css/custom.css</code></li>
-<li>The site uses inline styles minimally; prefer CSS classes</li>
+<li><code>_header.html</code>, <code>_footer.html</code>, <code>_body-header.html</code>, <code>_javascript.html</code></li>
+<li><code>page.html</code>, <code>all-pages.html</code>, <code>recent-pages.html</code>, <code>search.html</code></li>
+<li>CSS: <code>.markpub/themes/p5_forte/static/markpub_static/css/</code></li>
 </ul>
-<h3>Deployment</h3>
-<p>This appears to be deployed as a static site. Simply update HTML/CSS files and push changes. No build step required.</p>
-<h2>Important Notes</h2>
+<h3>Legacy Static Assets</h3>
+<p>The repo also contains legacy static HTML that predates Markpub. Markpub copies it into the output as-is:</p>
 <ul>
-<li>This is an archival/personal website, not an active application</li>
-<li>The <code>Skeleton-gh-pages/</code> directory is a reference copy and should not be modified</li>
-<li>The site has legacy dependencies (jQuery 2.1.1, old Google Prettify URL)</li>
-<li>Multiple HTML files may need updating if making site-wide navigation changes</li>
-<li>The <code>js/site.js</code> file is referenced but missing from root - copy from <code>Skeleton-gh-pages/js/site.js</code> if needed</li>
+<li><code>public/</code> — historical Praxis101 landing page with its own CSS/JS copies</li>
+<li><code>docs/</code> — another static HTML section with its own CSS/JS copies</li>
+<li><code>js/site.js</code>, <code>css/</code> — Skeleton CSS framework assets used by legacy pages</li>
+<li><code>previous-index.html</code> — archived version of the old landing page</li>
+</ul>
+<p>These legacy files use the Skeleton CSS framework (v2.0.4) with jQuery loaded from CDN.</p>
+<h3>Netlify Config</h3>
+<p><code>netlify.toml</code> sets <code>base = ".markpub"</code>, <code>publish = "./output"</code>, <code>PYTHON_VERSION = "3.12"</code>, and <code>ignore = "/bin/false"</code> (always rebuilds).</p>
+<h2>Editing</h2>
+<ul>
+<li>Add or edit Markdown files at the repo root to create/update wiki pages</li>
+<li>Update <code>Sidebar.md</code> to change navigation links</li>
+<li>Customize theme appearance in <code>.markpub/themes/p5_forte/static/markpub_static/css/</code></li>
+<li>Site metadata (title, author, edit URLs) is in <code>.markpub/markpub.yaml</code></li>
 </ul>
 
       </div>
@@ -178,7 +153,7 @@ python3 -m http.server 8000
     
     <div>Licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
     
-    <div class="text-sm italic">Site last updated on Monday, March 09, 2026 at 22:25 UTC.</div>
+    <div class="text-sm italic">Site last updated on Monday, March 09, 2026 at 23:11 UTC.</div>
   </div>
 </footer>
 </body>
