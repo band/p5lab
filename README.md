@@ -1,5 +1,30 @@
-# p5net-skeleton
+<div>
+	<nav class="linkbar">
+      <div class="linkbar-container">
+        <ul class="linkbar-list">
+          <li class="linkbar-item">
+            <a class="linkbar-link" href="https://textpile-dor.pages.dev/">The Textpile</a>
+          </li>
+          <li class="linkbar-item">
+            <a class="linkbar-link" href="#" data-popover="#wikiNavPopover">Massive Wiki work</a>
+            <div id="wikiNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="https://markpub.org/">Markpub</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://bandstands.praxis101.net/">bandstands</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</div>
 
-Web page for p5lab.net: the Praxis101 laboratory for work and play.
+![[portAransas-201206.jpg]]
+Port Aransas, Texas, June 2012
 
-Layout based on a now-defunct project that uses very little CSS and some basic HTML5.
+
+

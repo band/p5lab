@@ -24,6 +24,12 @@
 .linkbar {
   display: none; }
 
+.linkbar-container {
+    width: 100%;
+    margin-top: 6rem;
+    text-align: left;
+    margin-inline: auto;}
+
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
