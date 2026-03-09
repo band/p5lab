@@ -12,30 +12,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/p5lab/markpub_static/css/style.css">
+    <link rel="stylesheet" href="/p5lab/markpub_static/css/forte.css">
     <link rel="stylesheet" href="/p5lab/markpub_static/css/custom.css">
     <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.12.0/dist/bluesky-comments.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <script src="/p5lab/lunr-index-1773059714.1775045.js"></script>
+    <script src="/p5lab/lunr-index-1773094486.7219446.js"></script>
     <script>var index = lunr.Index.load(lunr_index)</script>
     
     
-    <script src="/p5lab/lunr-posts-1773059714.1775045.js"></script>
+    <script src="/p5lab/lunr-posts-1773094486.7219446.js"></script>
     <script> function randomPageLink() { return "/p5lab"+lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link; } </script>
     
   </head>
-<body>
-  <div id="header">
-    <span id="hamburger-btn" class="hidden">&#9776;</span><a class="button is-light" id="header-link" href="/p5lab/index.html" style="text-decoration: none;">p5lab: a workbench and playground</a>
-  </div>
+<body class="font-roboto text-gray-800 bg-gray-50 leading-relaxed">
+  <!-- Header -->
+    <header id="header" class="bg-gradient-to-r from-blue-500 to-blue-600 border-b-2 border-blue-700 px-4 py-3 sm:px-6">
+    <div class="flex items-center">
+      <button id="hamburger-btn" class="hidden text-white text-2xl mr-3 hover:text-blue-100 transition-colors" aria-label="Toggle menu">
+        &#9776;
+      </button>
+      <a id="header-link" href="/p5lab/index.html" 
+         class="text-white text-2xl font-light font-roboto uppercase tracking-wide hover:text-blue-100 transition-colors no-underline">
+        p5lab: a workbench and playground
+      </a>
+    </div>
+  </header>
 
-  <div class="container" id="flex-container">
-    <div id="side-column">
-      <div>
-        <button id="hide-btn">Hide</button>
-        <button id="move-btn" class="hidden">Move to Sidebar</button>
+  <!-- Main Container -->
+  <div id="flex-container" class="flex max-w-full px-4 sm:px-6 lg:px-8">
+    <!-- Sidebar -->
+    <aside id="side-column" class="bg-white min-w-48 max-h-[80vh] p-5 mr-4 overflow-y-auto border-r border-gray-300 shadow-sm">
+      <div class="mb-4">
+        <button id="hide-btn" class="px-3 py-1 text-xs uppercase tracking-wider font-trebuchet bg-blue-100 text-gray-700 border border-blue-200 rounded-md hover:bg-blue-200 transition-colors mr-2">
+          Hide
+        </button>
+        <button id="move-btn" class="hidden px-3 py-1 text-xs uppercase tracking-wider font-trebuchet bg-blue-100 text-gray-700 border border-blue-200 rounded-md hover:bg-blue-200 transition-colors">
+          Move to Sidebar
+        </button>
       </div>
-      <h3>Site Navigation</h3>
+      <div class="sidebar-content">
+        <h3>Site Navigation</h3>
 <div class="navlinks">
 <ul>
 <li><a class="wikilink" href="/p5lab/README.html">HOME</a></li>
@@ -50,32 +67,45 @@
   </button>
 </div>
 
-    </div>
+      </div>
+    </aside>
     
-    <div id="main-column">
-      <h1>Recent new and updated pages</h1>
+    <!-- Main Content -->
+    <main id="main-column" class="max-w-3xl bg-white px-5 py-5 pb-5 flex-grow ml-8 shadow-sm rounded-lg">
+      <h1 class="text-2xl font-trebuchet font-semibold text-gray-800 mb-6">Recent new and updated pages</h1>
       
-      <p>
-	<div><a href="/p5lab/CLAUDE.html">CLAUDE</a></div>
-	
-	<div><blockquote class="recent-changes-page-abstract">This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository. This is a static website for p5lab.net, the Praxis101 laboratory for work and play. The site is built using the Skeleton CSS framework (version [...]</blockquote></div>
-	
-      </p>
+      <div class="mb-6">
+        <div class="mb-2">
+          <a href="/p5lab/README.html" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">README</a>
+        </div>
+        
+        <div>
+          <blockquote class="recent-changes-page-abstract text-gray-600 italic border-l-4 border-blue-200 pl-4">
+            <div> <nav class="linkbar"> <div class="linkbar-container"> <ul class="linkbar-list"> <li class="linkbar-item"> <a class="linkbar-link" href="https://textpile-dor.pages.dev/">The Textpile</a> </li> <li class="linkbar-item"> <a class="linkbar-link" [...]
+          </blockquote>
+        </div>
+        
+      </div>
       
-      <p>
-	<div><a href="/p5lab/README.html">README</a></div>
-	
-	<div><blockquote class="recent-changes-page-abstract">Web page for p5lab.net: the Praxis101 laboratory for work and play. Layout based on a now-defunct project that uses very little CSS and some basic HTML5.</blockquote></div>
-	
-      </p>
+      <div class="mb-6">
+        <div class="mb-2">
+          <a href="/p5lab/CLAUDE.html" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">CLAUDE</a>
+        </div>
+        
+        <div>
+          <blockquote class="recent-changes-page-abstract text-gray-600 italic border-l-4 border-blue-200 pl-4">
+            This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository. This is a static website for p5lab.net, the Praxis101 laboratory for work and play. The site is built using the Skeleton CSS framework (version [...]
+          </blockquote>
+        </div>
+        
+      </div>
       
-    </div>
+    </main>
   </div>
-</div>
-<footer class="footer">
-  <div class="content has-text-centered">
+<footer class="bg-gray-100 py-8 mt-12">
+  <div class="text-center text-gray-600 space-y-1">
     
-    <div><strong>p5lab: a workbench and playground</strong> by (oh no) mr. bill.</div>
+    <div><strong class="font-semibold text-gray-800">p5lab: a workbench and playground</strong> by (oh no) mr. bill.</div>
     
     
     <div>Central repository at <a href="https://github.com/band/p5lab">p5lab</a>.</div>
@@ -83,7 +113,7 @@
     
     <div>Licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
     
-    <div><em>Site last updated on Monday, March 09, 2026 at 12:35 UTC.</em></div>
+    <div class="text-sm italic">Site last updated on Monday, March 09, 2026 at 22:14 UTC.</div>
   </div>
 </footer>
 <script src="/p5lab/markpub_static/js/script.js"></script>
