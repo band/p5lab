@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="fs_path" content="/CLAUDE.md">
+    
+    <title>CLAUDE - p5lab: a workbench and playground</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/p5lab/markpub_static/css/style.css">
+    <link rel="stylesheet" href="/p5lab/markpub_static/css/custom.css">
+    <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.12.0/dist/bluesky-comments.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="/p5lab/lunr-index-1773059714.1775045.js"></script>
+    <script>var index = lunr.Index.load(lunr_index)</script>
+    
+    
+    <script src="/p5lab/lunr-posts-1773059714.1775045.js"></script>
+    <script> function randomPageLink() { return "/p5lab"+lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link; } </script>
+    
+  </head>
+<body>
+  <div id="header">
+    <span id="hamburger-btn"
+    class="hidden">&#9776;</span><a class="button is-light" id="header-link" href="/p5lab/index.html">p5lab: a workbench and playground</a>
+  </div>
+
+  <div class="container" id="flex-container">
+    <div id="side-column">
+      <div>
+        <button id="hide-btn">Hide</button>
+        <button id="move-btn" class="hidden">Move to Sidebar</button>
+      </div>
+      <h3>Site Navigation</h3>
+<div class="navlinks">
+<ul>
+<li><a class="wikilink" href="/p5lab/README.html">HOME</a></li>
+<li><a href="/p5lab/search.html">SEARCH</a></li>
+<li><a href="/p5lab/all-pages.html">ALL PAGES</a></li>
+<li><a href="/p5lab/recent-pages.html">RECENT CHANGES</a></li>
+</ul>
+</div>
+<div class="navlinks">
+  <button onclick="location.href=`${randomPageLink()}`">
+    RANDOM PAGE
+  </button>
+</div>
+
+    </div>
+
+    <div id="main-column">
+      
+      <div> <!-- edit this page button -->
+	<p style="float:right; margin:.5em .5em
+	.5em"><a target="_blank" href="https://github.com/band/p5lab/edit/main/CLAUDE.md"
+	class="edit-this-page-button">Edit on GitHub</a></p>
+	<br clear="all">
+      </div> <!-- edit this page button -->
+      
+      <h1>CLAUDE.md</h1>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<h2>Project Overview</h2>
+<p>This is a static website for p5lab.net, the Praxis101 laboratory for work and play. The site is built using the Skeleton CSS framework (version 2.0.4), a minimal responsive boilerplate. This is a personal website with historical/archival content rather than an active development project.</p>
+<h2>Architecture</h2>
+<h3>Directory Structure</h3>
+<ul>
+<li><strong>Root <code>index.html</code></strong>: Main landing page for p5lab.net</li>
+<li><strong><code>public/</code></strong>: Contains an alternative/historical version of the Praxis101 site
+<ul>
+<li><code>public/index.html</code>: Different landing page emphasizing "present and past"</li>
+<li><code>public/works/</code>: PDF documents and other work artifacts</li>
+</ul>
+</li>
+<li><strong><code>blogs/</code></strong>: Blog index page that links to external blog archives</li>
+<li><strong><code>css/</code></strong>: Styling files
+<ul>
+<li><code>normalize.css</code>: CSS reset/normalization</li>
+<li><code>skeleton.css</code>: Core Skeleton framework grid and components</li>
+<li><code>custom.css</code>: Site-specific customizations</li>
+</ul>
+</li>
+<li><strong><code>images/</code></strong>: Site images including favicon and photos</li>
+<li><strong><code>Skeleton-gh-pages/</code></strong>: Reference copy of the original Skeleton framework (for reference only, not actively used)</li>
+</ul>
+<h3>Multiple Entry Points</h3>
+<p>This site has multiple HTML entry points that serve different purposes:</p>
+<ul>
+<li><code>/index.html</code> - Current p5lab landing page</li>
+<li><code>/public/index.html</code> - Historical Praxis101 page with different navigation</li>
+<li><code>/blogs/index.html</code> - Simple blog archive link page</li>
+</ul>
+<p>All three pages use the same CSS framework but have different content focuses and navigation structures.</p>
+<h3>JavaScript</h3>
+<p>The site references <code>js/site.js</code> in the root <code>index.html</code>, but this file doesn't exist in the repository root. The JavaScript functionality (smooth scrolling, sticky nav, popovers) is borrowed from the Skeleton reference implementation at <code>Skeleton-gh-pages/js/site.js</code>. If JavaScript features are needed, copy this file to a <code>js/</code> directory in the root.</p>
+<p>The site.js provides:</p>
+<ul>
+<li>Smooth scrolling for anchor links</li>
+<li>Sticky navigation on scroll</li>
+<li>Popover menus (used in "More?" navigation item)</li>
+<li>Code snippet HTML escaping</li>
+</ul>
+<h3>Dependencies</h3>
+<ul>
+<li><strong>Skeleton CSS Framework</strong> (v2.0.4): Minimal responsive grid system</li>
+<li><strong>jQuery</strong> (2.1.1): Loaded from CDN for site.js functionality</li>
+<li><strong>Google Fonts</strong>: Raleway font family</li>
+<li><strong>Google Code Prettify</strong>: Code syntax highlighting (referenced but may not be actively used)</li>
+</ul>
+<p>All dependencies are loaded from CDNs; there is no package.json or build system.</p>
+<h2>Development</h2>
+<p>This is a static HTML site with no build process or development server required.</p>
+<h3>Local Development</h3>
+<p>Open HTML files directly in a browser, or use any static file server:</p>
+<pre><code class="language-bash">python -m http.server 8000
+# or
+python3 -m http.server 8000
+</code></pre>
+<p>Then navigate to <code>http://localhost:8000</code></p>
+<h3>Editing Content</h3>
+<ul>
+<li>HTML files can be edited directly</li>
+<li>CSS customizations go in <code>css/custom.css</code></li>
+<li>The site uses inline styles minimally; prefer CSS classes</li>
+</ul>
+<h3>Deployment</h3>
+<p>This appears to be deployed as a static site. Simply update HTML/CSS files and push changes. No build step required.</p>
+<h2>Important Notes</h2>
+<ul>
+<li>This is an archival/personal website, not an active application</li>
+<li>The <code>Skeleton-gh-pages/</code> directory is a reference copy and should not be modified</li>
+<li>The site has legacy dependencies (jQuery 2.1.1, old Google Prettify URL)</li>
+<li>Multiple HTML files may need updating if making site-wide navigation changes</li>
+<li>The <code>js/site.js</code> file is referenced but missing from root - copy from <code>Skeleton-gh-pages/js/site.js</code> if needed</li>
+</ul>
+
+      
+    </div>
+  </div>
+  <script src="/p5lab/markpub_static/js/script.js"></script>
+  
+  <footer class="footer">
+  <div class="content has-text-centered">
+    
+    <div><strong>p5lab: a workbench and playground</strong> by (oh no) mr. bill.</div>
+    
+    
+    <div>Central repository at <a href="https://github.com/band/p5lab">p5lab</a>.</div>
+    
+    
+    <div>Licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
+    
+    <div><em>Site last updated on Monday, March 09, 2026 at 12:35 UTC.</em></div>
+  </div>
+</footer>
+</body>
+</html>
