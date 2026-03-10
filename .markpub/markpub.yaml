@@ -7,6 +7,8 @@ license: <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons 
   4.0 International License</a>
 recent_changes_count: 5
 sidebar: Sidebar.md
-no_edit_url_pages: null
+no_edit_url_pages:
+  - CLAUDE.md
+  - README.md
 excluded_directories: null
 theme: p5_forte
