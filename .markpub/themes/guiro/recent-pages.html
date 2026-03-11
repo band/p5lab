@@ -1,0 +1,35 @@
+{% set page_title = 'Recent Changes - ' ~ wiki_title %}{% include '_header.html' %}
+<body class="font-roboto text-gray-800 bg-gray-50 leading-relaxed">
+  <!-- Header -->
+  {% include '_body-header.html' %}
+  <!-- Main Container -->
+  <div id="flex-container" class="flex max-w-full px-4 sm:px-6 lg:px-8">
+    <!-- Main Content -->
+    <main class="container">
+      <div class="prose prose-gray max-w-none">
+      <h1 class="text-2xl font-trebuchet font-semibold text-gray-800 mb-6">Recent new and updated pages</h1>
+      {% for page in pages %}
+      <div class="mb-6">
+        <div class="mb-2">
+          <a href="{{websiteroot}}{{page.path}}" class="text-blue-600 hover:text-blue-800 transition-colors font-medium">{{page.title}}</a>
+        </div>
+        {% if page.abstract is defined %}
+        <div>
+          <blockquote class="recent-changes-page-abstract text-gray-600 italic border-l-4 border-blue-200 pl-4">
+            {{page.abstract}}
+          </blockquote>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+      </div>
+    </main>
+  </div>
+  <footer>
+    <div class="foot">
+      {% include '_footer.html' %}
+    </div>
+  </footer>
+<script src="{{websiteroot}}/markpub_static/js/script.js"></script>
+</body>
+</html>
