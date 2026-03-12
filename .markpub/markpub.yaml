@@ -1,4 +1,4 @@
-wiki_title: 'p5lab'
+wiki_title: 'p5lab: a workbench and a playground'
 author: (oh no) mr. bill
 edit_url: https://github.com/band/p5lab/edit/
 edit_branch: main
@@ -11,5 +11,4 @@ no_edit_url_pages:
   - CLAUDE.md
   - README.md
 excluded_directories: null
-#theme: p5_forte
-theme: guiro
+theme: p5_forte
