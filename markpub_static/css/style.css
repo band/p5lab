@@ -131,6 +131,12 @@
   color: #666;
 }
 
+/* README body */
+.value-imgcaption {
+  display: block;
+  text-align: center;
+}
+
 /* Media */
 img, video {
   max-width: 100%;
