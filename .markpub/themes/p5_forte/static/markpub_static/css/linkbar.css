@@ -1,26 +1,3 @@
-/*
-.container {
-  max-width: 900px;
-  width: 92%;
-  margin-left: 8rem;
-  margin-right: auto; }
-*/
-.header {
-  margin-top: 6rem;
-  text-align: center; }
-.value-props {
-  margin-top: 4rem;
-  margin-bottom: 4rem; }
-.value-img {
-  display: block;
-  text-align: center;
-  margin: 2.5rem auto 0;
-  max-width: 700px;
-  width: 100%; }
-.value-imgcaption {
-    display: block;
-    text-align: center; }
-
 .linkbar {
   display: none; }
 
@@ -28,19 +5,6 @@
     width: 100%;
     text-align: left;
     margin-inline: auto;}
-
-/* Larger than phone */
-@media (min-width: 550px) {
-  .header {
-    margin-top: 8rem; }
-  .value-props {
-    margin-top: 9rem;
-    margin-bottom: 7rem; }
-  .value-img {
-    margin-bottom: 1rem; }
-  .docs-section {
-    padding: 6rem 0; }
-}
 
 /* Larger than tablet */
 @media (min-width: 750px) {
@@ -70,7 +34,7 @@
     margin-bottom: 0; }
   .linkbar-link {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: .2rem;
     margin-right: 35px;
@@ -127,7 +91,7 @@
     position: relative;
     color: #222;
     display: block;
-    padding: 8px 20px;
+    padding: 5px 11px;
     border-bottom: 1px solid #eee;
     text-decoration: none;
     text-transform: uppercase;
