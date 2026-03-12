@@ -1,4 +1,4 @@
-# Elysium
+# Guiro - based on Elysium
 
 A modern, Tailwind-inspired theme for MarkPub, based on the Dolce theme.
 
