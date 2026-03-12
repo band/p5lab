@@ -4,83 +4,61 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="fs_path" content="">
-    
-    <title>Search - p5lab: a workbench and playground</title>
+    <title>Search - p5lab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" --
+  --    rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+<!-- Tailwind CSS replaced with custom utility classes in style.css -->
     <link rel="stylesheet" href="/p5lab/markpub_static/css/style.css">
-    <link rel="stylesheet" href="/p5lab/markpub_static/css/forte.css">
     <link rel="stylesheet" href="/p5lab/markpub_static/css/custom.css">
-    <link rel="stylesheet" href="/p5lab/markpub_static/css/linkbar.css">
+    <link rel="stylesheet" href="/p5lab/markpub_static/css/elysium.css">
     <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.12.0/dist/bluesky-comments.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <script src="/p5lab/lunr-index-1773347038.5594866.js"></script>
+    <script src="/p5lab/lunr-index-1773347598.874102.js"></script>
     <script>var index = lunr.Index.load(lunr_index)</script>
     
     
-    <script src="/p5lab/lunr-posts-1773347038.5594866.js"></script>
+    <script src="/p5lab/lunr-posts-1773347598.874102.js"></script>
     <script> function randomPageLink() { return "/p5lab"+lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link; } </script>
-    
+  
   </head>
 <body class="font-roboto text-gray-800 bg-gray-50 leading-relaxed">
   <!-- Header -->
-    <header id="header" class="bg-gradient-to-r from-blue-500 to-blue-600 border-b-2 border-blue-700 px-4 py-3 sm:px-6">
-    <div class="flex items-center">
-      <button id="hamburger-btn" class="hidden text-white text-2xl mr-3 hover:text-blue-100 transition-colors" aria-label="Toggle menu">
-        &#9776;
-      </button>
-      <a id="header-link" href="/p5lab/index.html" 
-         class="text-white text-2xl font-light font-roboto uppercase tracking-wide hover:text-blue-100 transition-colors no-underline">
-        p5lab: a workbench and playground
+    <header>
+    <div class="container nav">
+      <a class="brand" href="/p5lab/index.html">
+	<span>p5lab</span>
       </a>
+      <div class="nav-spacer"></div>
+      <nav class="nav-items" aria-label="Primary" style="font-size:1.25rem">
+        <a href="/">HOME</a>
+        <span aria-hidden="true" class="px-3">·</span>
+        <a href="/all-pages.html">All Pages</a>
+        <span aria-hidden="true" class="px-3">·</span>
+        <a href="/recent-pages.html">Recent Pages</a>
+        <span aria-hidden="true" class="px-3">·</span>
+        <a href="/search.html">Search</a>
+        <span aria-hidden="true" class="px-3">·</span>
+	<button onclick="location.href=`${randomPageLink()}`">
+	  RANDOM PAGE
+	</button>
+      </nav>
     </div>
   </header>
-
   <!-- Main Container -->
-  <div id="flex-container" class="flex max-w-full px-4 sm:px-6 lg:px-8">
-    <!-- Sidebar -->
-    <aside id="side-column" class="bg-white min-w-48 max-h-[80vh] p-5 mr-4 overflow-y-auto border-r border-gray-300 shadow-sm">
-      <div class="mb-4">
-        <button id="hide-btn" class="px-3 py-1 text-xs uppercase tracking-wider font-trebuchet bg-blue-100 text-gray-700 border border-blue-200 rounded-md hover:bg-blue-200 transition-colors mr-2">
-          Hide
-        </button>
-        <button id="move-btn" class="hidden px-3 py-1 text-xs uppercase tracking-wider font-trebuchet bg-blue-100 text-gray-700 border border-blue-200 rounded-md hover:bg-blue-200 transition-colors">
-          Move to Sidebar
-        </button>
-      </div>
-      <div class="sidebar-content">
-        <h3>Site Navigation</h3>
-<div class="navlinks">
-<ul>
-<li><a class="wikilink" href="/p5lab/README.html">HOME</a></li>
-<li><a href="/p5lab/search.html">SEARCH</a></li>
-<li><a href="/p5lab/all-pages.html">ALL PAGES</a></li>
-<li><a href="/p5lab/recent-pages.html">RECENT CHANGES</a></li>
-</ul>
-</div>
-<div class="navlinks">
-  <button onclick="location.href=`${randomPageLink()}`">
-    RANDOM PAGE
-  </button>
-</div>
-
-      </div>
-    </aside>
-
     <!-- Main Content -->
-    <main id="main-column" class="max-w-3xl bg-white px-5 py-5 pb-5 flex-grow ml-8 shadow-sm rounded-lg">
+    <main class="container">
       <div class="prose prose-gray max-w-none">
-        <h1 class="text-2xl font-trebuchet font-semibold text-gray-800 mb-6">Search in p5lab: a workbench and playground</h1>
+        <h1 class="text-2xl font-trebuchet font-semibold text-gray-800 mb-6">Search in p5lab</h1>
         
         <div class="flex gap-2 mb-6">
           <input type="text" placeholder="type search words" id="inputID" 
-                 class="text-base flex-1 px-3 py-2 rounded-md">
+                 class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
           <button type="button" onclick="doSearch();" id="searchButton" 
-                  class="text-base uppercase px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors font-medium">
+                  class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors font-medium">
             Search
           </button>
         </div>
@@ -88,7 +66,7 @@
         <div id="renderList" class="mt-6"></div>
       </div>
     </main>
-  </div>
+
   <script>// ensure the DOM is loaded, for things that need it
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -150,10 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
       })
     </script>
-  <footer class="bg-gray-100 py-8 mt-12">
-  <div class="text-center text-gray-600 space-y-1">
+  <footer>
+    <div class="foot">
+      <footer class="bg-gray-100 py-8 mt-12">
+  <div class="text-center text-gray-600 space-y-2">
     
-    <div><strong class="font-semibold text-gray-800">p5lab: a workbench and playground</strong> by (oh no) mr. bill.</div>
+    <div><strong class="font-semibold text-gray-800">p5lab</strong> by (oh no) mr. bill.</div>
     
     
     <div>Central repository at <a href="https://github.com/band/p5lab">p5lab</a>.</div>
@@ -161,9 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     <div>Licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
     
-    <div class="text-sm italic">Site last updated on Thursday, March 12, 2026 at 20:23 UTC.</div>
+    <div class="text-sm italic">Site last updated on Thursday, March 12, 2026 at 20:33 UTC.</div>
   </div>
 </footer>
+    </div>
+  </footer>
   <script src="/p5lab/markpub_static/js/script.js"></script>
 </body>
 </html>
