@@ -3,7 +3,7 @@
   <div class="linkbar-container">
     <ul class="linkbar-list">
       <li class="linkbar-item">
-        <a class="linkbar-link" href="https://textpile-dor.pages.dev/">The Textpile</a>
+        <a class="linkbar-link" href="https://femra.p5lab.net/">The Textpile</a>
       </li>
       <li class="linkbar-item">
         <a class="linkbar-link" href="#" data-popover="#wikiNavPopover">Massive Wiki work</a>
