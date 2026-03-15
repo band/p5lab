@@ -18,16 +18,6 @@
           </ul>
         </div>
       </li>
-      <li class="linkbar-item">
-        <a class="linkbar-link" href="#" data-popover="#moreNavPopover">More?</a>
-        <div id="moreNavPopover" class="popover">
-          <ul class="popover-list">
-            <li class="popover-item">
-              <a class="popover-link" href="#">Nothing yet.</a>
-            </li>
-          </ul>
-        </div>
-      </li>
     </ul>
   </div>
 </nav>
