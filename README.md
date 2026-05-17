@@ -5,9 +5,6 @@
       <li class="linkbar-item">
         <a class="linkbar-link" href="https://femra.p5lab.net/">The Textpile</a>
       </li>
-	  <li class="linkbar-item">
-        <a class="linkbar-link" href="https://wiki.p5lab.net/">A HangarWiki</a>
-      </li>
       <li class="linkbar-item">
         <a class="linkbar-link" href="#" data-popover="#wikiNavPopover">Massive Wiki work</a>
         <div id="wikiNavPopover" class="popover">
