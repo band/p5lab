@@ -6,8 +6,3 @@
 
 [build.environment]
   PYTHON_VERSION = "3.12"
-
-[[headers]]
-  for = "/swamp/latest"
-  [headers.values]
-    Content-Type = "text/plain; charset=utf-8"

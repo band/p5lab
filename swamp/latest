@@ -1,0 +1,12 @@
+Swamp-Version: 0.6.0
+From: Bill Anderson
+DID: did:key:z6MkovLMrtCzFqHoG31dU6MLcUu7ZdVxNe8DnNrbFk4SLP9z
+Date: 2026-07-17T09:52-0500
+Latest: QmfNy4bfZaehyJwmNAFCrTYoth2RTLQ4odaN7PQXE54wXT
+Message-ID: 2026-07-17-09-52-feed-claim-7d12
+Feed: https://p5lab.net/swamp/latest
+Content-Type: application/swamp; kind=feed-claim; v=0.6.0
+
+-----BEGIN SIGNATURE-----
+XB0NztK/gRSwSdEmcuosKjJQhpPuS2+oZO7F3Xn8NulND1u39Py8ueVF5DBmg4NRBJ0KWc3uS+lMjQSuXxZnBA==
+-----END SIGNATURE-----
