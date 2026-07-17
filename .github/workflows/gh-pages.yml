@@ -38,6 +38,9 @@ jobs:
         cd .markpub
         markpub build -i .. -o ../output -r /p5lab --lunr --commits
 
+    - name: copy Swamp feed-claim into output
+      run: cp -R $GITHUB_WORKSPACE/swamp $GITHUB_WORKSPACE/output/swamp
+
     - name: add a nojekyll file
       run: touch $GITHUB_WORKSPACE/output/.nojekyll
       
